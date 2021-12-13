@@ -1,0 +1,299 @@
+##########################################################
+-//////////////////////////////////-
+              AutoExe-Symphonic
+-//////////////////////////////////-
+##########################################################
+//Glows - Auras (2015-2019)
+
+ "Supervivientes (Survivor) - Color Azul Tono Claro"
+
+cl_glow_survivor_b 1
+cl_glow_survivor_g 0.2
+cl_glow_survivor_r 0
+
+  "Infectado de agarre cogiendo al superviviente, Hunter,Jockey,Charger(Survivor) - Color Violeta"
+
+cl_glow_ability_b 1
+cl_glow_ability_r 0.5
+cl_glow_ability_g 0
+
+  "Superviviente Incapacitado o cogido por infectado (Survivor) - Color Rojo"
+
+cl_glow_survivor_hurt_r 1
+cl_glow_survivor_hurt_g 0
+cl_glow_survivor_hurt_b 0
+ 
+ "Objetos de cerca(survivor) - Color Azul"
+
+cl_glow_item_b 1
+cl_glow_item_g 0
+cl_glow_item_r 0
+
+ "Objetos de Distancia(survivor) - Purpura" 
+
+cl_glow_item_far_b 1
+cl_glow_item_far_g 0
+cl_glow_item_far_r 1
+
+ "Superviviente vomitado (Survivor) - Color Verde Tono Claro"
+
+cl_glow_survivor_vomit_r 0
+cl_glow_survivor_vomit_g 1
+cl_glow_survivor_vomit_b 0.2
+ 
+ "Superviviente vomitado (Infected) - Color Verde Transparente"
+
+cl_glow_infected_vomit_r 0.2
+cl_glow_infected_vomit_g 1
+cl_glow_infected_vomit_b 0.5
+ 
+ "Infectado regenerado (Infected) - Color Morado"
+
+cl_glow_infected_g 0
+cl_glow_infected_b 1
+cl_glow_infected_r 0.2
+ 
+ "Infectado fantasma (Infected) - Color Celeste"
+
+cl_glow_ghost_infected_b 1
+cl_glow_ghost_infected_g 1
+cl_glow_ghost_infected_r 0
+
+ "Superviviente con salud Alta (Infected) - Color Verde"
+
+cl_glow_survivor_health_high_g 1
+cl_glow_survivor_health_high_b 0
+cl_glow_survivor_health_high_r 0
+
+ "Superviviente con salud Media (Infected) - Color Amarillo
+
+cl_glow_survivor_health_med_b 0
+cl_glow_survivor_health_med_g 1
+cl_glow_survivor_health_med_r 1
+
+ "Superviviente con salud baja(Infected) - Color Naranja"
+
+cl_glow_survivor_health_low_b 0
+cl_glow_survivor_health_low_r 1
+cl_glow_survivor_health_low_g 0.2
+
+ "Superviviente con salud Critica(Infected) - Color Rosado"
+
+cl_glow_survivor_health_crit_b 0.2
+cl_glow_survivor_health_crit_g 0
+cl_glow_survivor_health_crit_r 1
+
+ "Objetos de Tank(Infected) y Objetos estando en blanco y negro(Survivor) - Color Verde Limon"
+
+cl_glow_thirdstrike_item_r 0.4
+cl_glow_thirdstrike_item_g 1
+cl_glow_thirdstrike_item_b 0
+
+ "Parpadeo cuando desangra(Infected)"
+
+cl_glow_survivor_health_bleed_pulse 1
+cl_glow_survivor_health_bleed_pulse_amount 1
+cl_glow_survivor_health_bleed_pulse_speed 50
+cl_glow_survivor_health_include_buffer 1
+#############################
+//Commands - Comandos //
+#############################
+bind "q" "say_team push"
+bind "k" "stop"
+bind "j" "clear"
+bind "i" "record 1"
+bind "6" "Say_team "!s"
+bind "h" "say_team gogo"
+bind "g" "say_team back"
+bind "o" "say_team /mvp"
+bind "n" "say_team Help"
+bind "F3" "say_team !ready"
+bind "F4" "say_team !unready"
+bind "F6" "say_team !pause"
+bind "F7" "say_team /tank"
+bind "F8" "say_team /health"
+bind"F10""disconnect"
+bind"F11""toggleconsole"
+bind"F9""openserverbrowser"
+bind "v" "say_team Wait"
+bind "b" "say_team careful hit"
+bind "F1" "Vote Yes"
+bind "F2" "Vote No"
+cl_crosshair_dynamic 0
+sv_consistency 0
+sv_pure 0
+cl_viewmodelfovsurvivor 65
+fov_desired 104
+net_graph 1
+net_graphpos 1
+sv_cheats 1
+-------------------------------------------------------------
+sensitivity 2.4
+-------------------------------------------------------------
+sb_all_bot_game 1
+mat_monitorgamma_tv_enabled 1
+net_graphproportionalfont 1
+net_graphheight 120
+  ##########################################################
+//Mira color Violeta - Look Light blue Color
+
+cl_crosshair_red 0
+cl_crosshair_blue 250
+cl_crosshair_green 250
+  ##########################################################
+//Lerps (0 ms) (Sugerencía l4d1)
+rate "100000"
+cl_cmdrate "1337"
+cl_updaterate "1337"
+cl_interp_ratio "0"
+cl_interp "0"
+cl_resend "1.5"
+cl_timeout "15" 
+net_maxroutable "1200"
+net_splitrate "2"
+net_splitpacket_maxrate "50000"
+net_graphshowlatency "0"
+budget_show_history "0"
+bind "RIGHTARROW" "cl_interp 0; cl_interp_ratio 0"
+bind "LEFTARROW" "cl_interp 0.1; cl_interp_ratio 1"
+
+
+##########################################################
+
+
+
+#############################
+//Bindear net_graph//
+#############################
+
+bind "TAB" "+showscores_custom";				 		
+alias "+showscores_custom" "+showscores;net_graph 4";
+alias "-showscores_custom" "-showscores;net_graph 0";
+
+
+##########################################################
+--------------------Pistol Fire FAST---------------------
+
+bind mwheelup +attack
+bind mwheeldown +attack
+
+##########################################################
+--------------------Bind 180 Grados----------------------
+
+alias "+spin" "m_yaw 0.09"
+alias "-spin" "m_yaw 0.022"
+bind alt "+spin"
+
+----------------------------------------------------------------------------
+
+ #############################
+//Para los (Jugadores trolls)//
+ ############################# 
+
+bind "UPARROW" "vgup;Volumen"
+bind "DOWNARROW" "vgdn;Volumen"
+ 
+alias "vgup" "vg1"
+alias "vgdn" "vg1"
+alias "vgmin" "volume 0;echo  |XX_________| Volumen  0% Muteado!;alias vgup vg1;alias vgdn vgmin"
+alias "vg1" "volume 0.1;echo  |___*_______| Volumen  10%;alias vgup vg2;alias vgdn vgmin"
+alias "vg2" "volume 0.2;echo  |____*______| Volumen  20%;alias vgup vg4;alias vgdn vg1"
+alias "vg4" "volume 0.4;echo  |_____*_____| Volumen  40%;alias vgup vg6;alias vgdn vg2"
+alias "vg6" "volume 0.6;echo  |______*____| Volumen  60%;alias vgup vg7;alias vgdn vg4"
+alias "vg7" "volume 0.7;echo  |_______*___| Volumen  70%;alias vgup vg8;alias vgdn vg6"
+alias "vg8" "volume 0.8;echo  |________*__| Volumen  80%;alias vgup vg9;alias vgdn vg7"
+alias "vg9" "volume 0.9;echo  |_________*_| Volumen  90%;alias vgup vg10;alias vgdn vg8"
+alias "vg10" "volume 1;echo   |__________*| Volumen  100% Maximo!;alias vgup vg2;alias vgdn vg9"
+
+
+-----------------------------------------------------------------------------------------------------------------
+ ##########################################################
+    ///////// FPS BOOSTER - PLANTAS PRUEBA  ////////////
+ ##########################################################
+
+mat_bloom_scalefactor_scalar "0"
+cl_detaildist "0"
+mat_motion_blur_enabled "0"
+mat_colorcorrection "0"
+mat_specular "0"
+r_dynamic "0"
+r_eyemove "0"
+r_eyesize "0"
+r_flashlightmuzzleflash "0"
+r_3dsky "0"
+mat_grain_scale_override "0"
+mat_local_contrast_enable "0"
+con_enable "1"
+lower_body "0"
+cl_forcepreload "1"
+cl_clearhinthistory "1"
+cl_tracers "0"
+cl_detail_avoid_force "0"
+cl_ejectbrass "0"
+cl_detail_avoid_radius "0"
+violence_ablood "0"
+violence_hblood "0"
+violence_agibs "0"
+violence_hgibs "0"
+smoothstairs "0"
+cl_detail_avoid_recover_speed "0"
+cl_detail_max_sway "0"
+mat_viewportscale "1"
+mat_bumpmap "0"
+r_ambientfraction "0.2"
+r_shadows "0"
+r_RainParticleDensity "0"
+cl_impacteffects "0"
+r_flashlight_3rd_person_range "100"
+r_cheapwaterend "1"
+r_cheapwaterstart "1"
+r_dynamic "0"
+r_eyemove  "0"
+r_eyesize "0"
+r_eyeshift_x "0"
+r_eyeshift_y "0"
+r_eyeshift_z "0"
+r_PhysPropStaticLighting "0"
+r_radiosity "4"
+mat_colcorrection_disableentities "1"
+mat_colcorrection_editor "1"
+mat_vignette_enable "0"
+ 
+cl_autohelp "0"       
+cl_showhelp "0"       
+cc_subtitles "0"       
+c_thirdpersonshoulder "0"       
+cl_ragdoll_limit "0"       
+cl_forcepreload "1"       
+cl_detail_max_sway "0"  
+
+r_dynamic "0"                          
+r_PhysPropStaticLighting "0"       
+r_ambientfraction "0.2"     
+r_cheapwaterend "1"       
+r_cheapwaterstart "1"       
+r_skyboxfogfactor "0"       
+r_eyemove "0"       
+r_eyemove "0"                 
+r_eyeshift_z "0"       
+r_eyeshift_y "0"       
+r_eyeshift_x "0"          
+r_radiosity "4"    
+
+mat_bloom_scalefactor_scalar "0"       
+mat_grain_scale_override "0"       
+ 
+func_break_max_pieces "0"
+gameinstructor_enable "0"
+muzzleflash_light "0"
+z_wound_client_disabled "0"
+
+mat_bloom_scalefactor_scalar "0"
+z_decals "1"
+z_increment_lower "1"
+r_PhysPropStaticLighting "0"
+##################################################################################################################
+
+
+
+
